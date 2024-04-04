@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="shortcut icon" type="image/jpg" href="../../image/icon/favicon.ico"/>
+  <link rel="stylesheet" href="../../CSS/Detail/all.css?v=3.8.4">
+  <link rel="stylesheet" href="../../CSS/signUp.css?v=3.8.4">
+  <link rel="stylesheet" href="../../CSS/unselectable.css?v=3.8.4">
+  <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KKW65V25JH"></script>
+<script src="../../JS/FrontEnd/GoogleTag.js"></script>
+<body class="unselectable">
+  <section class="sign-up-section">
+    <div class="container">
+      <h2 class="sign-up-head">Login</h2>
+      <form id="login-form">
+        <div class="form-group">
+          <input id="username-field" name="username-field" class="username-field field" type="text" placeholder="Username" onblur="checkUsernameLogin()" required>
+          <p class="error-message" id="username-field-error">Error message for username input</p>
+        </div>
+        <div class="form-group">
+          <input id="password-field" name="password-field" class="password-field field" type="password" placeholder="Password" onblur="checkPasswordLogin()" required>
+          <p class="error-message" id="password-field-error">Error message for username input</p>
+          <i id="icon1" class="fa fa-eye password-toggle-icon" onclick="togglePasswordVisibility('.password-field', 'icon1')"></i>
+        </div>
+        <div class="form-group">
+          <input id="submit" name="submit" class="submit" type="submit" value="Login">
+        </div>
+      </form>
+      <div class="sign-up-option">
+        <a class="forget-password" href="/Login/"> Dont have account ?</a>
+      </div>
+    </div>
+  </section>
+  <script src="../../JS/FrontEnd/blindUser.js"></script>
+  <script src="../../JS/FrontEnd/passwordVisiblity.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/sendLoginForm.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/checkUsernameLogin.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/checkPasswordLogin.js"></script>
+</body>
+</html>

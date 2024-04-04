@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up</title>
+  <link rel="shortcut icon" type="image/jpg" href="../../image/icon/favicon.ico"/>
+  <link rel="stylesheet" href="../../CSS/Detail/all.css?v=3.8.4">
+  <link rel="stylesheet" href="../../CSS/signUp.css?v=3.8.4">
+  <link rel="stylesheet" href="../../CSS/unselectable.css?v=3.8.4">
+  <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KKW65V25JH"></script>
+<script src="../../JS/FrontEnd/GoogleTag.js"></script>
+<body class="unselectable">
+  <section class="sign-up-section">
+    <div class="container">
+      <h2 class="sign-up-head">Sign Up</h2>
+      <form id="signup-form">
+        <div class="form-group">
+          <input id="username-field" name="username-field" class="username-field field" type="text" placeholder="Username" onblur="checkUsername()" required>
+          <p class="error-message" id="username-field-error">Error message for username input</p>
+        </div>
+        <div class="form-group">
+          <input id="email-field" name="email-field" class="email-field field" type="text" placeholder="Email" onblur="checkEmail()" required>
+          <p class="error-message" id="email-field-error">Error message for Email input</p>
+        </div>
+        <div class="form-group">
+          <input id="password-field" name="password-field" class="password-field field" type="password" placeholder="Password" onblur="checkPassword()" required>
+          <p class="error-message" id="password-field-error">Error message for password input</p>
+          <i id="icon1" class="fa fa-eye password-toggle-icon" onclick="togglePasswordVisibility('.password-field', 'icon1')"></i>
+        </div>
+        <div class="form-group">
+          <input id="password-field-r" name="password-field-r" class="password-field-r field" type="password" placeholder="Repeat Password" onblur="checkPasswordR()" required>
+          <p class="error-message" id="password-field-r-error">Error message for repeat password input</p>
+          <i id="icon2" class="fa fa-eye password-toggle-icon" onclick="togglePasswordVisibility('.password-field-r', 'icon2')"></i>
+        </div>
+        <div class="form-group captcha-group">
+          <input id="captcha-field" name="captcha-field" class="captcha-field field" type="text" placeholder="Enter Captcha" onblur="checkCaptcha()" required>
+          <button id="refresh-btn" class="refresh-btn" type="button" onclick="refreshCaptcha()">⟳</button>
+          <img id="captchaImage" class="captcha-image" src="" alt="">
+          <p id="captcha-field-error" class="error-message">Error message for wrong captcha</p>
+        </div>
+        <input id="submit-button" name="submit" class="submit" type="submit" value="Submit">
+      </form>
+      <div class="sign-up-option">
+        <a class="have-account" href="/Login">Already have an account?</a>
+      </div>
+    </div>
+  </section>
+  <script src="../../JS/FrontEnd/blindUser.js"></script>
+  <script src="../../JS/FrontEnd/passwordVisiblity.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/sendRegisterForm.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/checkUsername.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/checkEmail.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/checkPassword.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/checkPasswordR.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/Captcha/refreshCaptcha.js"></script>
+  <script src="../../JS/FrontEnd/AJAX/Login/Captcha/checkCaptcha.js"></script>
+</body>
+</html>
