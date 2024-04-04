@@ -1,0 +1,170 @@
+section.sign-up-section {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: 
+  linear-gradient(to right bottom, 
+  rgba(0, 0, 0, 0.3),
+  rgba(0, 0, 0, 0.3)),
+  url(../image/Login/Mountain.jpg);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.container {
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+div.captcha-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+  
+h2.sign-up-head {
+  text-align: center;
+  margin-bottom: 50px;
+  color: white;
+}
+  
+input.field {
+  width: 100%;
+  height: 50px;
+  padding: 10px 20px 10px 20px;
+  margin-bottom: 25px;
+  background-color:rgba(231, 195, 195, 0.23);
+  color: white;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid transparent;
+  border-radius: 40px;
+  transition: 0.3s;
+  outline: none;
+}
+
+input.field:hover{
+  background-color:transparent;
+  border: 1px solid white;
+}
+  
+input:focus {
+  background-color:transparent;
+  border: 1px solid white;
+}
+
+input.submit {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  background-color: #fbceb5;
+  color: #000000;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+  
+input.submit:hover {
+  background-color: #eaaa88;
+}
+
+input.captcha-field{
+  width: 40%;
+}
+
+p.error-login {
+  color: rgb(233, 44, 44);
+}
+
+div.sign-up-option {
+  padding-top: 12px;
+  text-align: center;
+}
+
+p.error-login {
+  padding: 5px 0 0 10px;
+}
+
+a.forget-password {
+  text-decoration: none;
+  color: white;
+  padding: 5px 10px 0 0;
+}
+
+a.forget-password:hover {
+  color: white;
+}
+
+a.have-account {
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  padding: 5px 10px 0 0;
+}
+
+a.have-account:hover {
+  color: white;
+}
+
+.password-field-container {
+  position: relative;
+}
+
+.password-toggle-icon {
+  position: absolute;
+  top: 32%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  font-size: 1.17rem;
+}
+
+.error-message {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+  display: none;
+  position: absolute;
+  bottom: 5px;
+  left: 22px;
+}
+
+.error-message.active {
+  display: block;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+}
+
+.form-group {
+  position: relative;
+}
+
+.refresh-btn {
+  position: relative;
+  height: 50px;
+  padding: 0px 10px 5px 10px;
+  font-size: 2.1rem;
+  top: 0px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.refresh-btn:hover {
+  color: #eaaa88;
+}
+
+img.captcha-image {
+  height: 45px;
+  border-radius: 2rem;
+}
