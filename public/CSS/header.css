@@ -53,15 +53,15 @@ img.slide-img {
 
 @media(max-width: 1000px) {
   img.wearing {
-    content: url(./../Image/Header/Wearing2.png);
+    content: url(./../Image/Header/Wearing2.jpg);
   }
 
   img.electronics {
-    content: url(./../Image/Header/Electronics2.png);
+    content: url(./../Image/Header/Electronics2.jpg);
   }
 
   img.snack {
-    content: url(./../Image/Header/Snack2.png);
+    content: url(./../Image/Header/Snack2.jpg);
   }
 }
 
