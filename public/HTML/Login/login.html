@@ -21,10 +21,10 @@
       <h2 class="sign-up-head">Login</h2>
       <form id="login-form">
         <div class="form-group">
-          <input id="username-field" name="username-field" class="username-field field" type="text" placeholder="Username" onblur="checkUsernameLogin()" required>
+          <input id="username-field" name="username-field" class="username-field field" type="text" placeholder="Username" required>
         </div>
         <div class="form-group">
-          <input id="password-field" name="password-field" class="password-field field" type="password" placeholder="Password" onblur="checkPasswordLogin()" required>
+          <input id="password-field" name="password-field" class="password-field field" type="password" placeholder="Password" required>
           <i id="icon1" class="fa fa-eye password-toggle-icon" onclick="togglePasswordVisibility('.password-field', 'icon1')"></i>
         </div>
         <div class="form-group">
@@ -37,8 +37,5 @@
     </div>
   </section>
   <script src="../../JS/FrontEnd/Visibility/passwordVisibility.js"></script>
-  <script src="../../JS/FrontEnd/AJAX/Login/sendLoginForm.js"></script>
-  <script src="../../JS/FrontEnd/AJAX/Login/checkUsernameLogin.js"></script>
-  <script src="../../JS/FrontEnd/AJAX/Login/checkPasswordLogin.js"></script>
 </body>
 </html>
