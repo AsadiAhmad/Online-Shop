@@ -1,3 +1,5 @@
 /package-lock.json
 /package.json
 /node_modules/
+/public/JS/BackEnd/Connection/
+/public/JS/BackEnd/Connection/connect.js

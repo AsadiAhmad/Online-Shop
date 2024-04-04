@@ -21,16 +21,13 @@
       <form id="signup-form">
         <div class="form-group">
           <input id="username-field" name="username-field" class="username-field field" type="text" placeholder="Username" onblur="checkUsername()" required>
-          <p class="error-message" id="username-field-error">Error message for username input</p>
         </div>
         <div class="form-group">
           <input id="password-field" name="password-field" class="password-field field" type="password" placeholder="Password" onblur="checkPassword()" required>
-          <p class="error-message" id="password-field-error">Error message for password input</p>
           <i id="icon1" class="fa fa-eye password-toggle-icon" onclick="togglePasswordVisibility('.password-field', 'icon1')"></i>
         </div>
         <div class="form-group">
           <input id="password-field-r" name="password-field-r" class="password-field-r field" type="password" placeholder="Repeat Password" onblur="checkPasswordR()" required>
-          <p class="error-message" id="password-field-r-error">Error message for repeat password input</p>
           <i id="icon2" class="fa fa-eye password-toggle-icon" onclick="togglePasswordVisibility('.password-field-r', 'icon2')"></i>
         </div>
         <input id="submit-button" name="submit" class="submit" type="submit" value="Submit">
@@ -40,7 +37,6 @@
       </div>
     </div>
   </section>
-  <script src="../../JS/FrontEnd/blindUser.js"></script>
   <script src="../../JS/FrontEnd/Visibility/passwordVisibility.js"></script>
   <script src="../../JS/FrontEnd/AJAX/Login/sendRegisterForm.js"></script>
   <script src="../../JS/FrontEnd/AJAX/Login/checkUsername.js"></script>

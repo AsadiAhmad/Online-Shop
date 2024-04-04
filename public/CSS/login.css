@@ -126,23 +126,6 @@ a.have-account:hover {
   font-size: 1.17rem;
 }
 
-.error-message {
-  color: white;
-  font-size: 12px;
-  font-weight: 500;
-  display: none;
-  position: absolute;
-  bottom: 5px;
-  left: 22px;
-}
-
-.error-message.active {
-  display: block;
-  position: absolute;
-  bottom: -20px;
-  left: 0;
-}
-
 .form-group {
   position: relative;
 }

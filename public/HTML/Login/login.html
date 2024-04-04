@@ -21,11 +21,9 @@
       <form id="login-form">
         <div class="form-group">
           <input id="username-field" name="username-field" class="username-field field" type="text" placeholder="Username" onblur="checkUsernameLogin()" required>
-          <p class="error-message" id="username-field-error">Error message for username input</p>
         </div>
         <div class="form-group">
           <input id="password-field" name="password-field" class="password-field field" type="password" placeholder="Password" onblur="checkPasswordLogin()" required>
-          <p class="error-message" id="password-field-error">Error message for username input</p>
           <i id="icon1" class="fa fa-eye password-toggle-icon" onclick="togglePasswordVisibility('.password-field', 'icon1')"></i>
         </div>
         <div class="form-group">
@@ -37,7 +35,6 @@
       </div>
     </div>
   </section>
-  <script src="../../JS/FrontEnd/blindUser.js"></script>
   <script src="../../JS/FrontEnd/Visibility/passwordVisibility.js"></script>
   <script src="../../JS/FrontEnd/AJAX/Login/sendLoginForm.js"></script>
   <script src="../../JS/FrontEnd/AJAX/Login/checkUsernameLogin.js"></script>
