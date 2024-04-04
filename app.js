@@ -10,6 +10,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use('/node_modules', express.static(__dirname + '/node_modules'));
 app.use('/', routeMain);
 app.use('/Login', routeLogin);
 app.use('/api/Login', routeLogging);
