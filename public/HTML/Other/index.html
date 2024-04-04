@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title> Home Page </title>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/jpg" href="../../image/Icon/Shop-Logo.ico">
+  <title> Online Shop </title>
+  <link rel="stylesheet" href="./../../CSS/navbar.css">
+  <link rel="stylesheet" href="./../../CSS/Details/all.css">
 </head>
 <body>
-
+  <nav class="navbar">
+    <div class="navbar-container container">
+      <input class="checkbox-hamburger" type="checkbox" name="" id="checkbox-hamburger">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div id="logo" class="logo">
+        <a class="logo-link" href="/Home">
+          <img class="logo" src="../../image/Logo/Shop-Logo.png" alt="ZNU Logo">
+          <p id="logo-txt" class="logo">Online Shop</p>
+        </a>
+      </div>
+      <div class="button-container">
+        <div class="login-btn-container">
+          <a href="/Login/SignUp">
+            <button class="sign-up-btn"> Sign up </button>
+          </a>
+          <a href="/Login">
+            <button class="log-in-btn"> Log in </button>
+          </a>
+        </div>
+      </div>
+      <ul class="menu-items">
+        <li class="home-li"><a href="/Home">Home</a></li>
+        <div class="dropdown">
+          <li><a class="dropbtn"> Pruducts </a></li>
+          <div class="dropdown-content">
+            <a href="/Semester5"> Laptops </a>
+            <a href="/Semester6"> Phones </a>
+            <a href="/Semester7"> HamdBag </a>
+            <a href="/Semester8"> Shoes </a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </nav>
 </body>
 </html>
