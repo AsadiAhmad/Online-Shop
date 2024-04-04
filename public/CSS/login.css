@@ -146,25 +146,3 @@ a.have-account:hover {
 .form-group {
   position: relative;
 }
-
-.refresh-btn {
-  position: relative;
-  height: 50px;
-  padding: 0px 10px 5px 10px;
-  font-size: 2.1rem;
-  top: 0px;
-  background-color: transparent;
-  color: #fff;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-
-.refresh-btn:hover {
-  color: #eaaa88;
-}
-
-img.captcha-image {
-  height: 45px;
-  border-radius: 2rem;
-}

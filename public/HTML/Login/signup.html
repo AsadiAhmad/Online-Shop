@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up</title>
   <link rel="shortcut icon" type="image/jpg" href="../../image/Icon/Shop-Logo.ico"/>
-  <link rel="stylesheet" href="../../CSS/Detail/all.css?v=3.8.4">
-  <link rel="stylesheet" href="../../CSS/signUp.css?v=3.8.4">
-  <link rel="stylesheet" href="../../CSS/unselectable.css?v=3.8.4">
+  <link rel="stylesheet" href="../../CSS/Details/all.css">
+  <link rel="stylesheet" href="../../CSS/login.css">
+  <link rel="stylesheet" href="../../CSS/Details/unselectable.css">
   <script src="../../../node_modules/jquery/dist/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
@@ -24,10 +24,6 @@
           <p class="error-message" id="username-field-error">Error message for username input</p>
         </div>
         <div class="form-group">
-          <input id="email-field" name="email-field" class="email-field field" type="text" placeholder="Email" onblur="checkEmail()" required>
-          <p class="error-message" id="email-field-error">Error message for Email input</p>
-        </div>
-        <div class="form-group">
           <input id="password-field" name="password-field" class="password-field field" type="password" placeholder="Password" onblur="checkPassword()" required>
           <p class="error-message" id="password-field-error">Error message for password input</p>
           <i id="icon1" class="fa fa-eye password-toggle-icon" onclick="togglePasswordVisibility('.password-field', 'icon1')"></i>
@@ -37,12 +33,6 @@
           <p class="error-message" id="password-field-r-error">Error message for repeat password input</p>
           <i id="icon2" class="fa fa-eye password-toggle-icon" onclick="togglePasswordVisibility('.password-field-r', 'icon2')"></i>
         </div>
-        <div class="form-group captcha-group">
-          <input id="captcha-field" name="captcha-field" class="captcha-field field" type="text" placeholder="Enter Captcha" onblur="checkCaptcha()" required>
-          <button id="refresh-btn" class="refresh-btn" type="button" onclick="refreshCaptcha()">⟳</button>
-          <img id="captchaImage" class="captcha-image" src="" alt="">
-          <p id="captcha-field-error" class="error-message">Error message for wrong captcha</p>
-        </div>
         <input id="submit-button" name="submit" class="submit" type="submit" value="Submit">
       </form>
       <div class="sign-up-option">
@@ -51,7 +41,7 @@
     </div>
   </section>
   <script src="../../JS/FrontEnd/blindUser.js"></script>
-  <script src="../../JS/FrontEnd/passwordVisiblity.js"></script>
+  <script src="../../JS/FrontEnd/Visibility/passwordVisibility.js"></script>
   <script src="../../JS/FrontEnd/AJAX/Login/sendRegisterForm.js"></script>
   <script src="../../JS/FrontEnd/AJAX/Login/checkUsername.js"></script>
   <script src="../../JS/FrontEnd/AJAX/Login/checkEmail.js"></script>
