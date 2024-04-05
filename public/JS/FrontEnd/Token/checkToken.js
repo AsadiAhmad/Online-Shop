@@ -2,7 +2,15 @@ document.addEventListener("DOMContentLoaded", function(event){
     const token = localStorage.getItem('token'); // Adjust this line based on how you store the token
 
     if (token) {
-        document.getElementById('auth-buttons').style.display = 'none';
+        document.getElementById('signup-button').style.display = 'none';
+        document.getElementById('login-button').style.display = 'none';
         document.getElementById('add-product-btn').style.display = 'block';
+        document.getElementById('logout-button').style.display = 'block';
+    }
+    else {
+        document.getElementById('signup-button').style.display = 'block';
+        document.getElementById('login-button').style.display = 'block';
+        document.getElementById('add-product-btn').style.display = 'none';
+        document.getElementById('logout-button').style.display = 'none';
     }
 });

@@ -25,17 +25,22 @@
         </a>
       </div>
       <div class="button-container">
-        <div class="login-btn-container">
+        <div class="inner-btn-container">
           <a href="/Login/SignUp">
-            <button class="sign-up-btn"> Sign up </button>
+            <button id="signup-button" class="up-button signup-button"> Sign up </button>
           </a>
           <a href="/Login">
-            <button class="log-in-btn"> Log in </button>
+            <button id="login-button" class="down-button login-button"> Log in </button>
           </a>
         </div>
-        <a href="/AddProduct">
-          <button id="add-product-btn" class="add-product-btn" style="display: none;"> Add Product </button>
-        </a>
+        <div class="inner-btn-container">
+          <a href="/AddProduct">
+            <button id="add-product-btn" class="up-button add-product-button" style="display: none;"> Add Product </button>
+          </a>
+          <a href="">
+            <button id="logout-button" class="down-button logout-button" onclick="logout()" style="display: none;"> Log Out </button>
+          </a>
+        </div>
       </div>
       <ul class="menu-items">
         <li class="home-li"><a href="/Home">Home</a></li>
@@ -78,6 +83,8 @@
       <span class="dot"></span> 
     </div>
   </header>
+  <script src="./../../JS/FrontEnd/Token/checkToken.js"></script>
+  <script src="./../../JS/FrontEnd/Token/LogOut.js"></script>
   <script src="./../../JS/FrontEnd/Slide/Slide.js"></script>
 </body>
 </html>

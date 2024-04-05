@@ -97,13 +97,13 @@ p.logo {
   padding-bottom: 2.4rem;
 }
 
-/* login button */
+/* button container */
 
-div.login-btn-container {
+div.inner-btn-container {
   padding-bottom: 0.8rem;
 }
 
-button.sign-up-btn {
+button.up-button {
   position: absolute;
   height: 2.1rem;
   width: 4.5rem;
@@ -117,7 +117,7 @@ button.sign-up-btn {
 -webkit-transition: all .3s ease;
 }
 
-button.log-in-btn {
+button.down-button {
   height: 2.1rem;
   width: 8.2rem;
   font-weight: 500;
@@ -129,12 +129,25 @@ button.log-in-btn {
 -webkit-transition: all .3s ease;
 }
 
-button.sign-up-btn:hover {
+button.up-button:hover {
   background-color: #00aae4;
 }
 
-button.log-in-btn:hover {
+button.down-button:hover {
   background-color: #00aae4;
+}
+
+/* login button */
+
+/* log out and add product button */
+
+button.add-product-button {
+  width: 6.7rem;
+}
+
+button.logout-button {
+  width: 11.3rem;
+  padding-left: 6rem;
 }
 
 /* drop down menu */
