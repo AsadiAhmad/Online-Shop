@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="./../CSS/Details/all.css">
   <link rel="stylesheet" href="./../CSS/Details/unselectable.css">
   <link rel="stylesheet" href="./../CSS/Details/backgroundColor.css">
+  <link rel="stylesheet" href="./../CSS/Details/centerElement.css">
 </head>
 <body>
   <nav class="navbar">
@@ -139,7 +140,7 @@
           <% if (product.productType === 'phones') { %>
             <div class="part">
               <div class="part-container">
-                <div class="up">
+                <div class="up center">
                   <% if (product.picture) { %>
                     <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
                   <% } else { %>
