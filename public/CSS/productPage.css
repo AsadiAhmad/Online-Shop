@@ -8,16 +8,16 @@ section.product {
 
 div.outter-container {
   height: calc(100% - 30px);
-  width: calc(100% - 50px);
+  width: calc(100% - 200px);
   margin: 15px;
   margin-right: 0px;
-  margin-left: 50px;
+  margin-left: 200px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
 div.outter-container-left {
-  margin-right: 50px;
+  margin-right: 200px;
   margin-left: 0px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -50,8 +50,10 @@ div.part {
   margin-left: 2px;
   margin-right: 2px;
   background-color: white;
-  height: calc(100% - 30px);
+  height: calc(100% - 37px);
   width: 180px;
+  margin-top: 30px;
+  margin-bottom: 7px;
 } 
 
 div.part-container {
@@ -74,6 +76,18 @@ div.down {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+@media (max-width: 1000px) {
+  div.outter-container {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+  }
+
+  div.outter-container-left {
+    margin-right: 50px;
+    margin-left: 0px;
+  }
 }
 
 @media (max-width: 600px) {
