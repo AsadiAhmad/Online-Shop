@@ -16,6 +16,13 @@ const signupAPI = async (req, res) => {
     try {
         const db = await connection();
         const usersCollection = db.collection('users');
+
+        // Check if a user with the same username already exists
+        const existingUser = await usersCollection.findOne({ username: username });
+        if (existingUser) {
+            return res.status(400).json({ error: "Username already taken", message: "Please choose a different username." });
+        }
+
         const result = await usersCollection.insertOne(userData);
         console.log("User inserted with the following id:", result.insertedId);
         res.status(201).json({ message: "User created successfully", userId: result.insertedId });
