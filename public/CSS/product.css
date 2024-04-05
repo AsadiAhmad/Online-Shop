@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  padding: 20px;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+select.productType {
+  margin-bottom: 20px;
+}
+
+select.productType {
+  padding: 5px;
+  border: 2px solid #bbb;
+  border-radius: 5px;
+  background-color: #f9f9ff;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+select.productType:hover {
+  background-color: #f4f4f4;
+}
+
+
+input.product-photo {
+  margin-bottom: 20px;
+}
+
+input[type="file"]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #084cdf;
+  padding: 7px 15px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"], input[type="number"] {
+  width: 280px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Existing styles */
+
+#starRating {
+  display: flex;
+  justify-content: space-between;
+  max-width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
+  direction: ltr; /* Ensure left-to-right display */
+}
+
+#starRating input {
+  display: none;
+}
+
+#starRating label {
+  font-size: 30px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+#starRating input:checked ~ label {
+  color: #fde300;
+}
+
+#starRating label:hover,
+#starRating label:hover ~ label {
+  color: #5b625a;
+}
+
