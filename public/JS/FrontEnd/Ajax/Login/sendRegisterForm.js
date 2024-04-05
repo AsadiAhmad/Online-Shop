@@ -1,9 +1,8 @@
 $(document).ready(function() {
-    $('#signup-form').on('submit', function(event) {
+    $('#signup-form').submit(function(event) {
         event.preventDefault();
 
-        // Collect form data
-        var formData = {
+        const formData = {
             username: $('#username-field').val(),
             password: $('#password-field').val(),
             password_r: $('#password-field-r').val()
