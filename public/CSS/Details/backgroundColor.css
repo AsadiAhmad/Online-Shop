@@ -1,0 +1,23 @@
+.pink {
+  background: linear-gradient(to top,#ef394e,#ef4056);
+}
+
+.green {
+  background: linear-gradient(to top,#61b435,#75ca47);
+}
+
+.gray {
+  background-color: #90989b;
+}
+
+.green-gray {
+  background-color: #b2e0a5;
+}
+
+.blue-gray {
+  background-color: #b4dcca;
+}
+
+.brown {
+  background-color: #777649;
+}
