@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" type="image/jpg" href="../image/Icon/Shop-Logo.ico">
+  <title> Online Shop </title>
+  <link rel="stylesheet" href="./../CSS/navbar.css">
+  <link rel="stylesheet" href="./../CSS/header.css">
+  <link rel="stylesheet" href="./../CSS/productPage.css">
+  <link rel="stylesheet" href="./../CSS/Details/all.css">
+  <link rel="stylesheet" href="./../CSS/Details/unselectable.css">
+  <link rel="stylesheet" href="./../CSS/Details/backgroundColor.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container container">
+      <input class="checkbox-hamburger" type="checkbox" name="" id="checkbox-hamburger">
+      <div class="hamburger-lines">
+        <span class="line line1"></span>
+        <span class="line line2"></span>
+        <span class="line line3"></span>
+      </div>
+      <div id="logo" class="logo">
+        <a class="logo-link" href="/Home">
+          <img class="logo" src="./../Image/Logo/Shop-Logo.png" alt="ZNU Logo">
+          <p id="logo-txt" class="logo">Online Shop</p>
+        </a>
+      </div>
+      <div class="button-container">
+        <div class="inner-btn-container">
+          <a href="/Login/SignUp">
+            <button id="signup-button" class="up-button signup-button"> Sign up </button>
+          </a>
+          <a href="/Login">
+            <button id="login-button" class="down-button login-button"> Log in </button>
+          </a>
+        </div>
+        <div class="inner-btn-container">
+          <a href="/Product">
+            <button id="add-product-btn" class="up-button add-product-button" style="display: none;"> Add Product </button>
+          </a>
+          <a href="">
+            <button id="logout-button" class="down-button logout-button" onclick="logout()" style="display: none;"> Log Out </button>
+          </a>
+        </div>
+      </div>
+      <ul class="menu-items">
+        <li class="home-li"><a href="/Home">Home</a></li>
+        <div class="dropdown">
+          <li><a class="dropbtn"> Pruducts </a></li>
+          <div class="dropdown-content">
+            <a href="#laptop"> Laptops </a>
+            <a href="#phone"> Phones </a>
+            <a href="#electronic"> Electronics </a>
+            <a href="#handbag"> HandBag </a>
+            <a href="#shoes"> Shoes </a>
+            <a href="#snack"> Snacks </a>
+          </div>
+        </div>
+      </ul>
+    </div>
+  </nav>
+  <header class="header">
+    <div class="slideshow-container">
+      <a href="#handbag">
+        <div class="mySlides fade">
+          <img class="slide-img wearing" src="./../Image/Header/Wearing.jpg" style="width:100%">
+        </div>
+      </a>
+      <a href="#electronic">
+        <div class="mySlides fade">
+          <img class="slide-img electronics" src="./../Image/Header/Electronics.jpg" style="width:100%">
+        </div>
+      </a>
+      <a href="#snack">
+        <div class="mySlides fade">
+          <img class="slide-img snack" src="./../Image/Header/Snack.jpg" style="width:100%">
+        </div>
+      </a>
+    </div>
+    <br>
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+  </header>
+  <section id="laptop" class="product first-section">
+    <div class="outter-container green">
+      <div class="product-container">
+        <div class="part" style="background-color: transparent;">
+          <div class="part-container">
+            <div class="up">
+              <img class="product-img" src="./../Image/Title/Laptop.png" alt="">
+            </div>
+            <div class="down">
+              <p class="product-name" style="margin: auto;">Laptops</p>
+            </div>
+          </div>
+        </div>
+        <% var products;
+        products.forEach(product => { %>
+          <% if (product.productType === 'laptops') { %>
+            <div class="part">
+              <div class="part-container">
+                <div class="up">
+                  <% if (product.picture) { %>
+                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                  <% } else { %>
+                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                  <% } %>
+                </div>
+                <div class="down">
+                  <p class="product-name"><%= product.productName %></p>
+                  <p class="price"><%= product.productPrice %>$</p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+  <section id="phone" class="product">
+    <div class="outter-container outter-container-left pink">
+      <div class="product-container product-container-left">
+        <div class="part"  style="background-color: transparent;">
+          <div class="part-container">
+            <div class="up">
+              <img class="product-img" src="./../Image/Title/Phone.png" alt="">
+            </div>
+            <div class="down">
+              <p class="product-name" style="margin: auto;"> Phones </p>
+            </div>
+          </div>
+        </div>
+        <% var products;
+        products.forEach(product => { %>
+          <% if (product.productType === 'phones') { %>
+            <div class="part">
+              <div class="part-container">
+                <div class="up">
+                  <% if (product.picture) { %>
+                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                  <% } else { %>
+                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                  <% } %>
+                </div>
+                <div class="down">
+                  <p class="product-name"><%= product.productName %></p>
+                  <p class="price"><%= product.productPrice %>$</p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+  <section id="electronic" class="product">
+    <div class="outter-container green-gray">
+      <div class="product-container">
+        <div class="part"  style="background-color: transparent;">
+          <div class="part-container">
+            <div class="up">
+              <img class="product-img" src="./../Image/Title/Electronics.png" alt="">
+            </div>
+            <div class="down">
+              <p class="product-name" style="margin: auto;"> Electronics </p>
+            </div>
+          </div>
+        </div>
+        <% var products;
+        products.forEach(product => { %>
+          <% if (product.productType === 'electronics') { %>
+            <div class="part">
+              <div class="part-container">
+                <div class="up">
+                  <% if (product.picture) { %>
+                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                  <% } else { %>
+                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                  <% } %>
+                </div>
+                <div class="down">
+                  <p class="product-name"><%= product.productName %></p>
+                  <p class="price"><%= product.productPrice %>$</p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+  <section id="handbag" class="product">
+    <div class="outter-container outter-container-left blue-gray">
+      <div class="product-container product-container-left">
+        <div class="part" style="background-color: transparent;">
+          <div class="part-container">
+            <div class="up">
+              <img class="product-img" src="./../Image/Title/handbag.png" alt="">
+            </div>
+            <div class="down">
+              <p class="product-name" style="margin: auto;"> Hand Bag </p>
+            </div>
+          </div>
+        </div>
+        <% var products;
+        products.forEach(product => { %>
+          <% if (product.productType === 'handbag') { %>
+            <div class="part">
+              <div class="part-container">
+                <div class="up">
+                  <% if (product.picture) { %>
+                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                  <% } else { %>
+                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                  <% } %>
+                </div>
+                <div class="down">
+                  <p class="product-name"><%= product.productName %></p>
+                  <p class="price"><%= product.productPrice %>$</p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+  <section id="shoes" class="product">
+    <div class="outter-container gray">
+      <div class="product-container">
+        <div class="part" style="background-color: transparent;">
+          <div class="part-container">
+            <div class="up">
+              <img class="product-img" src="./../Image/Title/Shoes.png" alt="">
+            </div>
+            <div class="down">
+              <p class="product-name"  style="margin: auto;"> Shoes </p>
+            </div>
+          </div>
+        </div>
+        <% var products;
+        products.forEach(product => { %>
+          <% if (product.productType === 'shoes') { %>
+            <div class="part">
+              <div class="part-container">
+                <div class="up">
+                  <% if (product.picture) { %>
+                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                  <% } else { %>
+                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                  <% } %>
+                </div>
+                <div class="down">
+                  <p class="product-name"><%= product.productName %></p>
+                  <p class="price"><%= product.productPrice %>$</p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+  <section id="snack" class="product">
+    <div class="outter-container outter-container-left brown">
+      <div class="product-container product-container-left">
+        <div class="part" style="background-color: transparent;">
+          <div class="part-container">
+            <div class="up">
+              <img class="product-img" src="./../Image/Title/Snack.png" alt="">
+            </div>
+            <div class="down">
+              <p class="product-name" style="margin: auto;"> Snack </p>
+            </div>
+          </div>
+        </div>
+        <% var products;
+        products.forEach(product => { %>
+          <% if (product.productType === 'snacks') { %>
+            <div class="part">
+              <div class="part-container">
+                <div class="up">
+                  <% if (product.picture) { %>
+                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                  <% } else { %>
+                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                  <% } %>
+                </div>
+                <div class="down">
+                  <p class="product-name"><%= product.productName %></p>
+                  <p class="price"><%= product.productPrice %>$</p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+  <script src="./../JS/FrontEnd/Token/checkToken.js"></script>
+  <script src="./../JS/FrontEnd/Token/LogOut.js"></script>
+  <script src="./../JS/FrontEnd/Slide/Slide.js"></script>
+</body>
+</html>

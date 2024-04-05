@@ -5,7 +5,9 @@ const secretKey = 'jwt-fj2D-8tu9';
 async function addProduct(req, res) {
     try {
         const db = await connection();
+        console.log(db);
         const productsCollection = db.collection('Products');
+        console.log(productsCollection);
         const token = req.headers.authorization.split(' ')[1];
         const decodedToken = jwt.verify(token, secretKey);
         console.log(decodedToken);
@@ -17,9 +19,9 @@ async function addProduct(req, res) {
             rating: req.body.rating,
             creator: decodedToken.username
         };
-
+        console.log(product);
         const result = await productsCollection.insertOne(product);
-
+        console.log(result);
         console.log("Product inserted with the following id:", result.insertedId);
         res.status(201).json({ message: "Product added successfully", productId: result.insertedId });
     } catch (e) {
