@@ -19,6 +19,8 @@ const loginAPI = async (req, res) => {
 
         const token = jwt.sign({ username: user.username }, 'jwt-fj2D-8tu9', { expiresIn: '4h' });
 
+        await usersCollection.updateOne({ username: username }, { $set: { token: token } });
+
         res.status(200).json({ token: token });
     } catch (e) {
         console.error("Failed to connect to the database:", e);
