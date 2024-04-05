@@ -13,10 +13,13 @@ $(document).ready(function() {
             type: 'POST',
             data: formData,
             success: function(response) {
-                console.log(response);
+                console.log(response.message);
+                alert(response.message);
             },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.error(textStatus, errorThrown);
+            error: function(xhr) {
+                const errorMessage = xhr.responseJSON ? xhr.responseJSON.message : 'An unknown error occurred.';
+                console.log(errorMessage);
+                alert(errorMessage);
             }
         });
     });

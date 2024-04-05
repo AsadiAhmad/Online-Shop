@@ -4,10 +4,8 @@ const connection = require(path.join(__dirname, '..', 'Connection', 'connection.
 const signupAPI = async (req, res) => {
     let { username, password, password_r } = req.body;
 
-    console.log(username);
-
     if (password !== password_r) {
-        return res.status(400).json({ error: "Passwords do not match", message: "Please ensure both passwords are identical." });
+        return res.status(400).json({ error: "Passwords do not match", message: "Please ensure both passwords are matched!" });
     }
 
     const userData = {
