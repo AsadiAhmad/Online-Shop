@@ -4,6 +4,7 @@ const port = 5656;
 
 const routeMain = require(path.join(__dirname, 'public', 'JS', 'BackEnd', 'Route', 'MainRoute.js'));
 const routeLogin = require(path.join(__dirname, 'public', 'JS', 'BackEnd', 'Route', 'LoginRoute.js'));
+const routeProduct = require(path.join(__dirname, 'public', 'JS', 'BackEnd', 'Route', 'ProductRoute.js'));
 const routeLogging = require(path.join(__dirname, 'public','JS', 'BackEnd', 'Route', 'LoggingRoute.js'));
 
 const app = express();
@@ -16,6 +17,7 @@ app.use('/node_modules', express.static(__dirname + '/node_modules'));
 
 app.use('/', routeMain);
 app.use('/Login', routeLogin);
+app.use('/Product', routeProduct);
 app.use('/api/Login', routeLogging);
 
 app.listen(port, () => {
