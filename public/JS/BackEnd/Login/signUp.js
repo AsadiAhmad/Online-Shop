@@ -17,7 +17,6 @@ const signupAPI = async (req, res) => {
         const db = await connection();
         const usersCollection = db.collection('users');
 
-        // Check if a user with the same username already exists
         const existingUser = await usersCollection.findOne({ username: username });
         if (existingUser) {
             return res.status(400).json({ error: "Username already taken", message: "Please choose a different username." });
