@@ -59,7 +59,12 @@ div.part {
 div.part-container {
   height: calc(100% - 20px);
   width: calc(100% - 20px);
-  margin: 10px;
+  margin: 0px 10px 10px 10px;
+  padding-top: 10px;
+}
+
+a:hover > .part {
+  background-color: #f0f0f0; /* Change this to the desired background color */
 }
 
 div.up {

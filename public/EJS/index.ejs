@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./../CSS/Details/unselectable.css">
   <link rel="stylesheet" href="./../CSS/Details/backgroundColor.css">
   <link rel="stylesheet" href="./../CSS/Details/centerElement.css">
+  <link rel="stylesheet" href="./../CSS/Details/anchorInherit.css">
 </head>
 <body>
   <nav class="navbar">
@@ -102,21 +103,23 @@
         <% var products;
         products.forEach(product => { %>
           <% if (product.productType === 'laptops') { %>
-            <div class="part">
-              <div class="part-container">
-                <div class="up">
-                  <% if (product.picture) { %>
-                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
-                  <% } else { %>
-                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
-                  <% } %>
-                </div>
-                <div class="down">
-                  <p class="product-name"><%= product.productName %></p>
-                  <p class="price"><%= product.productPrice %>$</p>
+            <a href="">
+              <div class="part">
+                <div class="part-container">
+                  <div class="up">
+                    <% if (product.picture) { %>
+                      <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                    <% } else { %>
+                      <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                    <% } %>
+                  </div>
+                  <div class="down">
+                    <p class="product-name inheritable-link"><%= product.productName %></p>
+                    <p class="price inheritable-link"><%= product.productPrice %>$</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           <% } %>
         <% }) %>
       </div>
@@ -138,21 +141,23 @@
         <% var products;
         products.forEach(product => { %>
           <% if (product.productType === 'phones') { %>
-            <div class="part">
-              <div class="part-container">
-                <div class="up center">
-                  <% if (product.picture) { %>
-                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
-                  <% } else { %>
-                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
-                  <% } %>
-                </div>
-                <div class="down">
-                  <p class="product-name"><%= product.productName %></p>
-                  <p class="price"><%= product.productPrice %>$</p>
+            <a href="">
+              <div class="part">
+                <div class="part-container">
+                  <div class="up center">
+                    <% if (product.picture) { %>
+                      <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                    <% } else { %>
+                      <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                    <% } %>
+                  </div>
+                  <div class="down">
+                    <p class="product-name inheritable-link"><%= product.productName %></p>
+                    <p class="price inheritable-link"><%= product.productPrice %>$</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           <% } %>
         <% }) %>
       </div>
@@ -174,21 +179,23 @@
         <% var products;
         products.forEach(product => { %>
           <% if (product.productType === 'electronics') { %>
-            <div class="part">
-              <div class="part-container">
-                <div class="up">
-                  <% if (product.picture) { %>
-                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
-                  <% } else { %>
-                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
-                  <% } %>
-                </div>
-                <div class="down">
-                  <p class="product-name"><%= product.productName %></p>
-                  <p class="price"><%= product.productPrice %>$</p>
+            <a href="">
+              <div class="part">
+                <div class="part-container">
+                  <div class="up">
+                    <% if (product.picture) { %>
+                      <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                    <% } else { %>
+                      <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                    <% } %>
+                  </div>
+                  <div class="down">
+                    <p class="product-name inheritable-link"><%= product.productName %></p>
+                    <p class="price inheritable-link"><%= product.productPrice %>$</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           <% } %>
         <% }) %>
       </div>
@@ -210,21 +217,23 @@
         <% var products;
         products.forEach(product => { %>
           <% if (product.productType === 'handbag') { %>
-            <div class="part">
-              <div class="part-container">
-                <div class="up">
-                  <% if (product.picture) { %>
-                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
-                  <% } else { %>
-                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
-                  <% } %>
-                </div>
-                <div class="down">
-                  <p class="product-name"><%= product.productName %></p>
-                  <p class="price"><%= product.productPrice %>$</p>
+            <a href="">
+              <div class="part">
+                <div class="part-container">
+                  <div class="up">
+                    <% if (product.picture) { %>
+                      <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                    <% } else { %>
+                      <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                    <% } %>
+                  </div>
+                  <div class="down">
+                    <p class="product-name inheritable-link"><%= product.productName %></p>
+                    <p class="price inheritable-link"><%= product.productPrice %>$</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           <% } %>
         <% }) %>
       </div>
@@ -246,21 +255,23 @@
         <% var products;
         products.forEach(product => { %>
           <% if (product.productType === 'shoes') { %>
-            <div class="part">
-              <div class="part-container">
-                <div class="up">
-                  <% if (product.picture) { %>
-                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
-                  <% } else { %>
-                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
-                  <% } %>
-                </div>
-                <div class="down">
-                  <p class="product-name"><%= product.productName %></p>
-                  <p class="price"><%= product.productPrice %>$</p>
+            <a href="">
+              <div class="part">
+                <div class="part-container">
+                  <div class="up">
+                    <% if (product.picture) { %>
+                      <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                    <% } else { %>
+                      <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                    <% } %>
+                  </div>
+                  <div class="down">
+                    <p class="product-name inheritable-link"><%= product.productName %></p>
+                    <p class="price inheritable-link"><%= product.productPrice %>$</p>
+                  </div>
                 </div>
               </div>
-            </div>
+            </a>
           <% } %>
         <% }) %>
       </div>
@@ -282,21 +293,23 @@
         <% var products;
         products.forEach(product => { %>
           <% if (product.productType === 'snacks') { %>
-            <div class="part">
-              <div class="part-container">
-                <div class="up">
-                  <% if (product.picture) { %>
-                    <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
-                  <% } else { %>
-                    <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
-                  <% } %>
-                </div>
-                <div class="down">
-                  <p class="product-name"><%= product.productName %></p>
-                  <p class="price"><%= product.productPrice %>$</p>
+            <a href="">
+              <div class="part">
+                <div class="part-container">
+                  <div class="up">
+                    <% if (product.picture) { %>
+                      <img class="product-img" src="data:image/png;base64,<%= product.picture.toString('base64') %>" alt="<%= product.productName %>">
+                    <% } else { %>
+                      <img class="product-img" src="./../Image/Error/loadError.png" alt="Default Image">
+                    <% } %>
+                  </div>
+                  <div class="down">
+                    <p class="product-name inheritable-link"><%= product.productName %></p>
+                    <p class="price inheritable-link"><%= product.productPrice %>$</p>
+                  </div>
                 </div>
               </div>
-            </div>
+              </a>
           <% } %>
         <% }) %>
       </div>
