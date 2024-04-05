@@ -1,0 +1,24 @@
+.product-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+.product-img {
+  width: 300px;
+  height: auto;
+}
+.product-details {
+  text-align: center;
+  margin-top: 20px;
+}
+.comment-section {
+  width: 80%;
+  margin: 20px auto;
+}
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
