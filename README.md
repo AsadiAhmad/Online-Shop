@@ -10,9 +10,13 @@ https://nodejs.org/en/download
 ```
 
 ### Step2 : Install MongoDB
-online shop uses MongoDB so install MongoDB first
+Online Shop uses MongoDB so install MongoDB first
 ```sh
 https://www.mongodb.com/docs/manual/installation/
 ```
 
-
+### Step3 : Clone GitHub Repo
+clone the src of project
+```sh
+https://www.mongodb.com/docs/manual/installation/
+```
