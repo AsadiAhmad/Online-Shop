@@ -28,9 +28,22 @@
                 <% } %>
             </div>
         </div>
-        <div class="comment-section">
-            <h3>Comments</h3>
-        </div>
+            <div class="comment-section">
+                <h3>Comments</h3>
+                <% if (product.comments && product.comments.length > 0) { %>
+                    <% product.comments.forEach(function(comment) { %>
+                        <div>
+                            <% if (comment.username && comment.comment) { %>
+                                <p><strong><%= comment.username %></strong>: <%= comment.comment %></p>
+                            <% } else { %>
+                                <p>Comment details not available.</p>
+                            <% } %>
+                        </div>
+                    <% }); %>
+                <% } else { %>
+                    <p>No comments yet. Be the first to comment!</p>
+                <% } %>
+            </div>
         <div class="comment-form">
             <h3>Leave a Comment</h3>
             <form id="comment-form">

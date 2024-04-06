@@ -10,14 +10,16 @@ const ProductPageAPI = async (req, res) => {
     try {
         const db = await connection();
         const productsCollection = db.collection('Products');
-        const productId = req.params.productId; // Get the product ID from the URL
+        const commentsCollection = db.collection('Comments');
+        const productId = req.params.productId;
         const objectId = new ObjectId(productId);
-        const product = await productsCollection.findOne({ _id: objectId }); // Fetch the specific product
+        const product = await productsCollection.findOne({ _id: objectId });
         if (!product) {
             res.status(404).send('Product not found');
             return;
         }
 
+        product.comments = await commentsCollection.find({productId: productId}).toArray();
         ejs.renderFile(path.join(__dirname, '..', '..', '..', 'EJS', 'product.ejs'), { product: product }, (err, html) => {
             if (err) {
                 console.error("Failed to render EJS file:", err);

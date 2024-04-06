@@ -21,6 +21,6 @@ async function commentAPI(req, res){
         console.error('Error submitting comment:', error);
         res.status(500).json({ message: 'There was an error submitting your comment. Please try again.' });
     }
-};
+}
 
 module.exports = commentAPI;
