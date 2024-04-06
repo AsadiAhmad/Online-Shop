@@ -20,6 +20,19 @@ const ProductPageAPI = async (req, res) => {
         }
 
         product.comments = await commentsCollection.find({productId: productId}).toArray();
+
+        let totalRating = 0;
+        let ratingCount = 0;
+        product.comments.forEach(comment => {
+            const rating = Number(comment.rating);
+            if (!isNaN(rating)) { // Check if the conversion was successful
+                totalRating += rating;
+                ratingCount++;
+            }
+        });
+
+        product.rating = ratingCount > 0 ? totalRating / ratingCount : 0;
+        console.log(product.rating);
         ejs.renderFile(path.join(__dirname, '..', '..', '..', 'EJS', 'product.ejs'), { product: product }, (err, html) => {
             if (err) {
                 console.error("Failed to render EJS file:", err);
