@@ -56,3 +56,9 @@ Goto your IDE terminall and type
 npm install
 ```
 with this command nodejs will install package-lock.json and set the configurations
+
+### Step5 : install necessary Packages
+Install all of the Packages with npm command
+```sh
+npm install
+```
