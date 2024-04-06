@@ -4,7 +4,7 @@ An online shop with user comments
 ## Tutorial
 
 ### Tech
-[![JQuery][JQuery.com]][JQuery-url]
+*[![JQuery][JQuery.com]][JQuery-url]
 
 ### Step1 : Install Nodejs
 Online Shop uses Nodejs as Backend Language
