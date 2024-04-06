@@ -4,7 +4,7 @@ An online shop with user comments
 ## Tutorial
 
 ### Tech
-* ![Tech Stack](https://tech-stack-badge.vercel.app/api/tech-stack?stacks=nextjs)
+
 
 ### Step1 : Install Nodejs
 Online Shop uses Nodejs as Backend Language
