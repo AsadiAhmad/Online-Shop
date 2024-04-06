@@ -116,4 +116,16 @@ module.exports = connection;
 if you have another formate of connection string you can replace it into uri
 
 ### Step7 : Create MongoDB Datbase and collections :
+create datbase named `OnlineShop`
 
+commands used in MongoDB shell :
+```sh
+use OnlineShop
+```
+and Create these three collections :
+```sh
+use OnlineShop
+db.createCollection("Comments")
+db.createCollection("Products")
+db.createCollection("users")
+```
