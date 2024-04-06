@@ -129,3 +129,9 @@ db.createCollection("Comments")
 db.createCollection("Products")
 db.createCollection("users")
 ```
+
+### Step8 : Run the project :
+Goto root path run this:
+```sh
+npm app.js
+```
