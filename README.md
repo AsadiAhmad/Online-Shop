@@ -112,5 +112,5 @@ async function connection() {
 
 module.exports = connection;
 ```
-#### Dont forget to replcae your <user> and <password> of your Mongo database here
+#### Dont forget to replcae your `username` and `password` of your Mongo database here
 if you have another formate of connection string you can replace it into uri
