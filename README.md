@@ -93,7 +93,7 @@ I have gitignore my connection so you need create new connection file :
 
 Create a Floder named `Connection` in /root/public/JS/BackEnd path
 
-Create js file named `connection` like this :
+Create js file named `connection.js` like this :
 ```sh
 const { MongoClient } = require('mongodb');
 const uri = 'mongodb+srv://<user>:<password>@cluster-0-130.81jyjqx.mongodb.net/';
