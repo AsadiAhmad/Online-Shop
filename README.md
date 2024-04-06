@@ -145,3 +145,7 @@ Goto root path run this:
 ```sh
 npm app.js
 ```
+
+## View
+
+<img src="screenShots"/>
