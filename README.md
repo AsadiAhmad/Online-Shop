@@ -148,4 +148,4 @@ npm app.js
 
 ## View
 
-<img src="screenShots"/>
+<img src="screenShots/Screenshot (794).png"/>
