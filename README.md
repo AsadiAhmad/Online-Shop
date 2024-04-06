@@ -57,8 +57,35 @@ npm install
 ```
 with this command nodejs will install package-lock.json and set the configurations
 
-### Step5 : install necessary Packages
+### Step5 : Install necessary Packages
 Install all of the Packages with npm command
 ```sh
 npm install
 ```
+
+### Step6 : Create Connection to MongoDB
+I have gitignore my connection so you need create new connection file :
+
+Create a Floder named `Connection` in /root/public/JS/BackEnd path
+
+Create js file named `connection` like this :
+```sh
+const { MongoClient } = require('mongodb');
+const uri = 'mongodb+srv://<user>:<password>@cluster-0-130.81jyjqx.mongodb.net/';
+const dbName = 'OnlineShop';
+
+let db;
+
+async function connection() {
+    if (!db) {
+        const client = new MongoClient(uri, { useUnifiedTopology: true });
+        await client.connect();
+        db = client.db(dbName);
+    }
+    return db;
+}
+
+module.exports = connection;
+```
+#### Dont forget to replcae your <user> and <password> of your Mongo database here
+if you have another formate of connection string you can replace it into uri
