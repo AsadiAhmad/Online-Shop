@@ -60,7 +60,32 @@ with this command nodejs will install package-lock.json and set the configuratio
 ### Step5 : Install necessary Packages
 Install all of the Packages with npm command
 ```sh
-npm install
+npm install ejs
+```
+```sh
+npm install express
+```
+```sh
+npm install jquery
+```
+```sh
+npm install jsonwebtoken
+```
+```sh
+npm install mongodb
+```
+```sh
+npm install mongoose
+```
+```sh
+npm install multer
+```
+```sh
+npm install path
+```
+for checking installed packages you can run this command :
+```sh
+npm list
 ```
 
 ### Step6 : Create Connection to MongoDB
