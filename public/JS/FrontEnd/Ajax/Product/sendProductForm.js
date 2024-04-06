@@ -13,7 +13,7 @@ $(document).ready(function() {
             processData: false, // Important: set to false to prevent jQuery from converting the FormData into a string
             contentType: false, // Important: set to false to let the browser set the correct content type
             headers: {
-                "Authorization": "Bearer " + token // Include the token in the Authorization header
+                "Authorization": "Bearer " + token
             },
             success: function(response) {
                 console.log('Product added successfully:', response);

@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(event){
-    const token = localStorage.getItem('token'); // Adjust this line based on how you store the token
+    const token = localStorage.getItem('token');
 
     if (token) {
         document.getElementById('signup-button').style.display = 'none';

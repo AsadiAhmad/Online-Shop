@@ -11,7 +11,7 @@ $(document).ready(function() {
             url: '/api/Comment',
             data: formData,
             headers: {
-                "Authorization": "Bearer " + token // Include the token in the Authorization header
+                "Authorization": "Bearer " + token
             },
             success: function(response) {
                 console.log(response);

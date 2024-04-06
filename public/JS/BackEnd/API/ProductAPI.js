@@ -25,7 +25,7 @@ const ProductPageAPI = async (req, res) => {
         let ratingCount = 0;
         product.comments.forEach(comment => {
             const rating = Number(comment.rating);
-            if (!isNaN(rating)) { // Check if the conversion was successful
+            if (!isNaN(rating)) {
                 totalRating += rating;
                 ratingCount++;
             }
