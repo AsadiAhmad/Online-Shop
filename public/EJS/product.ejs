@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="stylesheet" href="/CSS/productPage.css">
+    <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
     <div class="product-container">
@@ -32,10 +33,9 @@
         </div>
         <div class="comment-form">
             <h3>Leave a Comment</h3>
-            <form action="/submit-comment" method="post">
+            <form id="comment-form">
                 <input type="hidden" name="productId" value="<%= product._id %>">
                 <textarea name="comment" placeholder="Your comment here..." required></textarea>
-                <!-- <input type="number" name="rating" placeholder="Rate this product (1-5)" min="1" max="5" required> -->
                 <label for="productRate">Product Rating:</label>
                 <div id="starRating" dir="ltr">
                     <input type="radio" id="star5" name="rating" value="5"><label for="star5" title="5 stars">★</label>
@@ -44,9 +44,10 @@
                     <input type="radio" id="star2" name="rating" value="2"><label for="star2" title="2 stars">★</label>
                     <input type="radio" id="star1" name="rating" value="1"><label for="star1" title="1 star">★</label>
                 </div>
-                <button type="submit">Submit</button>
+                <button name="submit" class="submit" type="submit" value="Submit">Submit</button>
             </form>
         </div>
     </div>
+    <script src="/JS/FrontEnd/Ajax/Comment/sendCommentForm.js"></script>
 </body>
 </html>

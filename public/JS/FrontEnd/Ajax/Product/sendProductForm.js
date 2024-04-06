@@ -2,10 +2,9 @@ $(document).ready(function() {
     $('#productForm').submit(function(event) {
         event.preventDefault();
 
-        var formData = new FormData(this); // Create a FormData object from the form
+        const formData = new FormData(this);
 
-        // Fetch the stored token from localStorage and set in the header
-        var token = localStorage.getItem('token');
+        const token = localStorage.getItem('token');
 
         $.ajax({
             url: '/api/Product/addProduct',
