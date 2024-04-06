@@ -8,6 +8,6 @@ const {
 } = require(path.join(__dirname, '..', 'API', 'ProductAPI.js'));
 
 router.get('/', ProductAPI);
-router.get('/Page', ProductPageAPI);
+router.get('/Page/:productId', ProductPageAPI);
 
 module.exports = router;

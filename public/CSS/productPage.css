@@ -1,24 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
 .product-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 .product-img {
   width: 300px;
   height: auto;
+  margin-bottom: 20px;
 }
+
 .product-details {
   text-align: center;
   margin-top: 20px;
 }
+
+.product-name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.product-rating {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.star {
+  color: #fde16d;
+}
+
 .comment-section {
   width: 80%;
   margin: 20px auto;
 }
+
 .comment-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+}
+
+.comment-form input[type="text"],
+.comment-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.comment-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #0056b3;
+}
+
+#starRating {
+  display: flex;
+  justify-content: space-between;
+  max-width: 200px;
+  margin: auto;
+  margin-bottom: 20px;
+  direction: rtl;
+}
+
+#starRating input {
+  display: none;
+}
+
+#starRating label {
+  font-size: 30px;
+  color: #ddd;
+  cursor: pointer;
+}
+
+#starRating input:checked ~ label {
+  color: #fde300;
+}
+
+#starRating label:hover,
+#starRating label:hover ~ label {
+  color: #5b625a;
 }

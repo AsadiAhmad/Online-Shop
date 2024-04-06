@@ -91,7 +91,7 @@ input[type="submit"]:hover {
   max-width: 200px;
   margin: auto;
   margin-bottom: 20px;
-  direction: ltr; /* Ensure left-to-right display */
+  direction: rtl;
 }
 
 #starRating input {
