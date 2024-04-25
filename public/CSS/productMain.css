@@ -33,7 +33,7 @@ div.product-container {
   margin-left: 15px;
   height: calc(100% - 9px);
   width: calc(100% - 15px);
-  scrollbar-color: #8d8d8d #565656;
+  scrollbar-color: #565656 #8d8d8d;
   scrollbar-width: thin;
 } 
 
@@ -73,7 +73,8 @@ div.up {
 }
 
 img.product-img {
-  height: 100%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
 div.down {

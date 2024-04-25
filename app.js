@@ -10,6 +10,7 @@ const routeProduct = require(path.join(__dirname, 'public', 'JS', 'BackEnd', 'Ro
 const routeLogging = require(path.join(__dirname, 'public','JS', 'BackEnd', 'Route', 'LoggingRoute.js'));
 const routeAddProduct = require(path.join(__dirname, 'public', 'JS', 'BackEnd', 'Route', 'AddProductRoute.js'));
 const routeComment = require(path.join(__dirname, 'public', 'JS', 'BackEnd', 'Route', 'CommentRoute.js'));
+const routeSortProducts = require(path.join(__dirname, 'public', 'JS', 'BackEnd', 'Route', 'SortProductsRoute.js'));
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use('/Product', routeProduct);
 app.use('/api/Login', routeLogging);
 app.use('/api/Product', routeAddProduct);
 app.use('/api/Comment', routeComment);
+app.use('/api/SortProducts', routeSortProducts);
 
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`);

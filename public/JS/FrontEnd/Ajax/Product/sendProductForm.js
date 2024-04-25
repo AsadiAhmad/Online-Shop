@@ -17,6 +17,7 @@ $(document).ready(function() {
             },
             success: function(response) {
                 console.log('Product added successfully:', response);
+                window.location.href = '/';
             },
             error: function(jqXHR, textStatus, errorThrown) {
                 console.error('Error adding product:', textStatus, errorThrown);

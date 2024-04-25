@@ -6,12 +6,14 @@
   <title> Online Shop </title>
   <link rel="stylesheet" href="./../CSS/navbar.css">
   <link rel="stylesheet" href="./../CSS/header.css">
+  <link rel="stylesheet" href="./../CSS/ordering.css">
   <link rel="stylesheet" href="./../CSS/productMain.css">
   <link rel="stylesheet" href="./../CSS/Details/all.css">
   <link rel="stylesheet" href="./../CSS/Details/unselectable.css">
   <link rel="stylesheet" href="./../CSS/Details/backgroundColor.css">
   <link rel="stylesheet" href="./../CSS/Details/centerElement.css">
   <link rel="stylesheet" href="./../CSS/Details/anchorInherit.css">
+  <script src="/node_modules/jquery/dist/jquery.min.js"></script>
 </head>
 <body>
   <nav class="navbar">
@@ -87,9 +89,19 @@
       <span class="dot"></span> 
     </div>
   </header>
-  <section id="laptop" class="product first-section">
+  <section class="sorter">    
+    <div class="sort-tabs">
+      <button class="sort-tab" onclick="sortProducts('mostExpensive')">Most Expensive</button>
+      <button class="sort-tab" onclick="sortProducts('cheapest')">Cheapest</button>
+      <button class="sort-tab" onclick="sortProducts('newest')">Newest</button>
+      <button class="sort-tab" onclick="sortProducts('oldest')">Oldest</button>
+      <button class="sort-tab" onclick="sortProducts('mostPopular')">Most Popular</button>
+      <button class="sort-tab" onclick="sortProducts('mostHated')">Most Hated</button>
+     </div> 
+  </section>
+  <section class="product first-section">
     <div class="outter-container green">
-      <div class="product-container">
+      <div id="laptop" class="product-container">
         <div class="part" style="background-color: transparent;">
           <div class="part-container">
             <div class="up">
@@ -125,9 +137,9 @@
       </div>
     </div>
   </section>
-  <section id="phone" class="product">
+  <section class="product">
     <div class="outter-container outter-container-left pink">
-      <div class="product-container product-container-left">
+      <div id="phone" class="product-container product-container-left">
         <div class="part"  style="background-color: transparent;">
           <div class="part-container">
             <div class="up">
@@ -163,9 +175,9 @@
       </div>
     </div>
   </section>
-  <section id="electronic" class="product">
+  <section class="product">
     <div class="outter-container green-gray">
-      <div class="product-container">
+      <div id="electronic" class="product-container">
         <div class="part"  style="background-color: transparent;">
           <div class="part-container">
             <div class="up">
@@ -201,9 +213,9 @@
       </div>
     </div>
   </section>
-  <section id="handbag" class="product">
+  <section class="product">
     <div class="outter-container outter-container-left blue-gray">
-      <div class="product-container product-container-left">
+      <div id="handbag" class="product-container product-container-left">
         <div class="part" style="background-color: transparent;">
           <div class="part-container">
             <div class="up">
@@ -239,9 +251,9 @@
       </div>
     </div>
   </section>
-  <section id="shoes" class="product">
+  <section class="product">
     <div class="outter-container gray">
-      <div class="product-container">
+      <div id="shoes" class="product-container">
         <div class="part" style="background-color: transparent;">
           <div class="part-container">
             <div class="up">
@@ -277,9 +289,9 @@
       </div>
     </div>
   </section>
-  <section id="snack" class="product">
+  <section class="product">
     <div class="outter-container outter-container-left brown">
-      <div class="product-container product-container-left">
+      <div id="snack" class="product-container product-container-left">
         <div class="part" style="background-color: transparent;">
           <div class="part-container">
             <div class="up">
@@ -309,7 +321,7 @@
                   </div>
                 </div>
               </div>
-              </a>
+            </a>
           <% } %>
         <% }) %>
       </div>
@@ -318,5 +330,6 @@
   <script src="./../JS/FrontEnd/Token/checkToken.js"></script>
   <script src="./../JS/FrontEnd/Token/LogOut.js"></script>
   <script src="./../JS/FrontEnd/Slide/Slide.js"></script>
+  <script src="../JS/FrontEnd/Ajax/GroupTab/GroupTab.js"></script>
 </body>
 </html>

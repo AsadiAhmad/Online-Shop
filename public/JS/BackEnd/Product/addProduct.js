@@ -2,6 +2,7 @@ const path = require("path");
 const jwt = require('jsonwebtoken');
 const connection = require(path.join(__dirname, '..', 'Connection', 'connection.js'));
 const secretKey = 'jwt-fj2D-8tu9';
+
 async function addProduct(req, res) {
     try {
         const db = await connection();
@@ -14,7 +15,8 @@ async function addProduct(req, res) {
             productPrice: req.body.productPrice,
             picture: req.file ? Buffer.from(req.file.buffer) : null,
             rating: req.body.rating,
-            creator: decodedToken.username
+            creator: decodedToken.username,
+            productDate: new Date()
         };
         const result = await productsCollection.insertOne(product);
         console.log("Product inserted with the following id:", result.insertedId);

@@ -1,0 +1,31 @@
+section.sorter {
+  margin: auto;
+}
+
+.sort-tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  margin-top: 30px;
+  overflow-x: auto;
+}
+   
+.sort-tab {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: calc(100%/6);
+}
+   
+.sort-tab:hover {
+  background-color: #ddd;
+}
+   
+.sort-tab.active {
+  background-color: #878787;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+   
