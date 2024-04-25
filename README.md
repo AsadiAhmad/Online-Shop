@@ -149,3 +149,11 @@ npm app.js
 ## View
 
 <img src="screenShots/Screenshot (796).png"/>
+<img src="screenShots/Screenshot (797).png"/>
+<img src="screenShots/Screenshot (798).png"/>
+<img src="screenShots/Screenshot (799).png"/>
+<img src="screenShots/Screenshot (800).png"/>
+<img src="screenShots/Screenshot (801).png"/>
+<img src="screenShots/Screenshot (802).png"/>
+<img src="screenShots/Screenshot (803).png"/>
+<img src="screenShots/Screenshot (804).png"/>
