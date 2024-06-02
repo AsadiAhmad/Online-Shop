@@ -17,7 +17,7 @@ An online shop with user comments
 Online Shop uses Nodejs as Backend Language
 
 Download and install Nodejs with this link :
-```sh[
+```sh
 https://nodejs.org/en/download
 ```
 
